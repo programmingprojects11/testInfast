@@ -1,0 +1,26 @@
+
+נושא המבחן: 
+
+<select (change)="check($event)" [(ngModel)]="selectedCategory">
+  <option  *ngFor="let item of categories" [value]="item.categoryName"
+  >{{item.categoryName}}</option>
+</select>
+
+<DIV><DIV></DIV></DIV>
+<p *ngIf="title !=null">{{title}}</p>
+<!-- https://handsontable.com/blog/articles/2017/8/11-best-rich-text-editors
+https://www.tiny.cloud/ -->
+
+<button (click)="addQuestion()">הוסף שאלה</button>
+<br>
+<button (click)="getQuestion()">הצג שאלות המאגר</button>
+<!-- <div *ngIf="questions!=null" *ngFor="let item of questions" [value]="item.questionDescription">
+  {{item.questionDescription}}
+</div> -->
+
+<select *ngIf="questions !=null"  [(ngModel)]="selectedQuestion">
+  <option *ngFor="let item of questions" [value]="item.questionDescription"
+  >{{item.questionDescription}}</option>
+</select>
+<!-- <input type="button" onclick="addQuestion()"/> -->
+<!-- [value]="item.categoryId" -->

@@ -1,0 +1,241 @@
+
+<div class="row">
+  <p>הכנס שם</p>
+  <input type="text" [(ngModel)]="t.teacherName">
+</div>
+<div class="row">
+    <p>הכנס סיסמא</p>
+  <input type="password" [(ngModel)]="t.teacherPassword">
+</div>
+<div class="row">
+  <p></p>
+  <input type="submit" (click)="login()" value="שלח">
+  
+</div>
+<!-- טופס הרשמה בגי קוורי -->
+<!--
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Raleway);
+* {
+    margin:0px;
+    padding:0px;
+    font-family: 'Raleway', sans-serif;
+    color:#333;
+}
+body {
+    background-color:#ecf0f1;
+}
+#home {
+    width:100%;
+    height:92.8vh;
+    
+}
+.lr-wrapper {
+    max-width:100%;
+    height:500px;
+    margin-top:5%;
+}
+.lr-content {
+    height:500px;
+    width:400px;
+}
+.lr-head {
+    width:100%;
+    height:50px;
+}
+.lr-l_b {
+    width:49.8%;
+    height:50px;
+    float:left;
+    background-color:#e74c3c;
+    transition: background-color 0.8s ease;
+    cursor:pointer;
+}
+.lr-l_b > div {
+    height:7px;
+    width:100%;
+}
+.lr-l_b > span {
+    width:100%;
+    font-size:30px;
+    height:30px;
+    padding-top:5px;
+    color:white;
+    transition: color 0.8s ease;
+}
+.lr-r_b {
+    width:49.7%;
+    height:50px;
+    float:right;
+    transition: background-color 0.8s ease;
+    cursor:pointer;
+}
+.lr-r_b > div {
+    height:7px;
+    width:100%;
+}
+.lr-r_b > span {
+    width:100%;
+    font-size:30px;
+    height:30px;
+    padding-top:5px;
+    transition: color 0.8s ease;
+}
+#l-f {
+    transition: display 1.8s ease;
+}
+.l-username {
+    width:94%;
+    height:40px;
+    margin-top:100px;
+    padding-left:20px;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    border:1px solid #b3b3b3;
+    transition:border 1.0s ease;
+}
+.l-username:focus {
+    border:1px solid #FF5252;
+}
+
+.l-password {
+    width:94%;
+    height:40px;
+    margin-top:20px;
+    padding-left:20px;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    border:1px solid #b3b3b3;
+    transition:border 1.0s ease;
+}
+.l-password:focus {
+    border:1px solid #FF5252;
+}
+.l-submit {
+    width:150px;
+    height:50px;
+    margin-top:20px;
+    border:none;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    background-color:#e74c3c;
+    color:white;
+    border-bottom:5px solid #c0392b;
+    cursor:pointer;
+}
+#r-f {
+    display:none;
+}
+.r-email {
+    width:94%;
+    height:40px;
+    margin-top:100px;
+    padding-left:20px;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    border:1px solid #b3b3b3;
+    transition:border 1.0s ease;
+}
+
+.r-username {
+    width:94%;
+    height:40px;
+    margin-top:20px;
+    padding-left:20px;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    border:1px solid #b3b3b3;
+     transition:border 1.0s ease;
+}
+.r-password {
+    width:94%;
+    height:40px;
+    margin-top:20px;
+    padding-left:20px;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    border:1px solid #b3b3b3;
+     transition:border 1.0s ease;
+}
+.r-submit {
+    width:150px;
+    height:50px;
+    margin-top:20px;
+    border:none;
+    outline:none;
+    font-size:25px;
+    font-family:Raleway;
+    background-color:#e74c3c;
+    color:white;
+    border-bottom:5px solid #c0392b;
+    cursor:pointer;
+}
+.r  -password:focus {
+    border:1px solid #FF5252;
+}
+.r-username:focus {
+    border:1px solid #FF5252;
+}
+.r-email:focus {
+    border:1px solid #FF5252;
+}
+.accent-text {
+    color: #e74c3c;
+    transition:color 1s;
+}
+</style>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+ <script> 
+      $(document).ready(function(){
+        $("#register").click(function(){
+          $("#login").css("background-color", "#ecf0f1");
+          $("#login > span").css("color", "#333");
+          $("#register").css("background-color", "#e74c3c");
+          $("#register > span").css("color", "white");
+          $("#l-f").toggle(500);
+          $("#r-f").toggle(1000);
+        })
+        $("#login").click(function(){
+          $("#register").css("background-color", "#ecf0f1");
+          $("#register > span").css("color", "#333");
+          $("#login").css("background-color", "#e74c3c");
+          $("#login > span").css("color", "white");
+          $("#l-f").toggle(1000);
+          $("#r-f").toggle(500);
+        })
+      });
+</script>
+<div class="lr-wrapper" align="center">
+              <div class="lr-content">
+                <div class="lr-head">
+                  <div class="lr-l_b" id="login" onClick>
+                    <div></div>
+                    <span>Login</span>
+                  </div>
+                  <div class="lr-r_b" id="register">
+                    <div></div>
+                    <span>SignUp</span>
+                  </div>
+                </div>
+                <div class="lr-main">
+                  <form method="DELETE" id="l-f" action="javascript:login();">
+                    <input type="text" id="username_login" name="l-username" class="l-username" placeholder="Username"/>
+                    <input type="password" id="password_login" name="l-password" class="l-password" placeholder="Password"/>
+                    <input type="submit" name="l-submit" class="l-submit" value="Login"/>
+                  </form>
+                  <form method="DELETE" id="r-f" action="javascript:login();">
+                    <input type="email" id="r-email" class="r-email" name="r-email" placeholder="Email"/>
+                    <input type="text" id="username_register" name="r-username" class="r-username" placeholder="Username"/>
+                    <input type="password" id="password_register" name="r-password" class="r-password" placeholder="Password"/>
+                    <input type="submit" name="l-submit" class="r-submit" value="Sign Up"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+           -->
